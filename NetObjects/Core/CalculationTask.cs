@@ -29,10 +29,6 @@ namespace NetObjects.Core
 		/// </summary>
 		public int CountOfIteration;
 		/// <summary>
-		/// максимальное число рассылаемых узлов вирусов за шаг итерации
-		/// </summary>       
-		public int MaxVirus;
-		/// <summary>
 		///для сетей таких как случайная с множеством связей(multilink) или произвольная кейли(keilyrandom) количество связей
 		///которые можно добавить 
 		/// </summary>
@@ -202,7 +198,6 @@ namespace NetObjects.Core
 		{
 			NodeCount = nodeCount;
 			CountOfIteration = countOfIteration;
-			MaxVirus = maxVirus;
 			PofInfective = pofInfective;
 			NetType = netType;
 			IsAppend = append;
