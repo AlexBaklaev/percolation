@@ -1,0 +1,59 @@
+﻿<Window x:Class="StartCalculating.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Установка Параметров Расчета" Height="495" Width="696" xmlns:my="clr-namespace:StartCalculating">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*" />
+            <ColumnDefinition Width="665*" />
+        </Grid.ColumnDefinitions>
+        <Rectangle Height="456" HorizontalAlignment="Left" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="674" Grid.ColumnSpan="2" />
+        <Button Content="Начать расчет" Height="23" HorizontalAlignment="Right" Margin="0,433,0,0" Name="StartCalculate" VerticalAlignment="Top" Width="101" Click="StartCalculate_Click" Grid.Column="1" />
+        <Grid Height="252" HorizontalAlignment="Left" Margin="196,7,0,0" Name="grid1" VerticalAlignment="Top" Width="192" Grid.Column="1">
+            <RadioButton Content="Кейли Случайная"          Height="16" HorizontalAlignment="Left" Margin="6,6,0,0"   Name="Keily" VerticalAlignment="Top" IsChecked="False" Checked="KeilyMultyLink_Checked" />
+            <RadioButton Content="Случайная Multilink"      Height="16" HorizontalAlignment="Left" Margin="6,72,0,0"  Name="MultyLink" VerticalAlignment="Top" Checked="KeilyMultyLink_Checked" />
+            <RadioButton Content="Квадратная"               Height="16" HorizontalAlignment="Left" Margin="6,50,0,0"  Name="Quadro" VerticalAlignment="Top" Checked="NotKeilyMultyLink_Checked" />
+            <RadioButton Content="Кейли Регулярная"         Height="16" HorizontalAlignment="Left" Margin="6,28,0,0"  Name="KeilyRegular" VerticalAlignment="Top" Checked="NotKeilyMultyLink_Checked"/>
+            <RadioButton Content="Треугольная Случайная"    Height="16" HorizontalAlignment="Left" Margin="6,90,0,0"  Name="TriangleIrregular" VerticalAlignment="Top" Checked="NotKeilyMultyLink_Checked"/>
+            <RadioButton Content="Треугольная Регулярная"   Height="16" HorizontalAlignment="Left" Margin="6,134,0,0" Name="TriangleRegular" VerticalAlignment="Top" Checked="NotKeilyMultyLink_Checked"/>
+            <RadioButton Content="Шестиугольная Регулярная" Height="16" HorizontalAlignment="Left" Margin="6,112,0,0" Name="Hexagon" VerticalAlignment="Top" Checked="NotKeilyMultyLink_Checked"/>
+            <RadioButton Content="3,12^2"                   Height="16" HorizontalAlignment="Left" Margin="6,156,0,0" Name="Net3122" VerticalAlignment="Top" Checked="NotKeilyMultyLink_Checked"/>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="72,211,0,0" Name="AddLinkstextBox" VerticalAlignment="Top" Width="120" Visibility="Collapsed" TextChanged="AddLinkstextBox_TextChanged" />
+            <TextBox Height="23" HorizontalAlignment="Right" Margin="0,180,0,0" Name="MinLinkstextBox" VerticalAlignment="Top" Width="120" Visibility="Collapsed" TextChanged="MinLinkstextBox_TextChanged" />
+            <Label Content="MinLinks" Height="28" HorizontalAlignment="Left" Margin="0,180,0,0" Name="MinLinkslabel" VerticalAlignment="Top" Visibility="Collapsed" />
+            <Label Content="AddLinks" Height="28" HorizontalAlignment="Left" Margin="0,206,0,0" Name="AddLinkslabel" VerticalAlignment="Top" Visibility="Collapsed" />
+        </Grid>
+        <Grid Height="355" HorizontalAlignment="Left" Margin="390,6,0,0" Name="grid2" VerticalAlignment="Top" Width="250" Grid.Column="1">
+            <Label Content="Количество экпериментов" Height="28" HorizontalAlignment="Left" Margin="14,1,0,0" Name="label1" VerticalAlignment="Top" Width="245" />
+            <Slider Height="23" HorizontalAlignment="Left" Margin="14,28,0,0" Name="ExpCount" VerticalAlignment="Top" Width="100" Maximum="200" ValueChanged="ExpCount_ValueChanged" SmallChange="1" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="120,28,0,0" Name="ExpCountView" VerticalAlignment="Top" Width="51" IsReadOnly="True" Text="0" />
+            <Label Content="Количество итераций эксперимента" Height="28" HorizontalAlignment="Left" Margin="14,50,0,0" Name="label2" VerticalAlignment="Top" Width="239" />
+            <Slider Height="23" HorizontalAlignment="Left" Margin="14,72,0,0" Maximum="200" Name="IterationCount" SmallChange="1" VerticalAlignment="Top" Width="100" ValueChanged="IterationCount_ValueChanged" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="120,72,0,0" Name="IterationCountView" VerticalAlignment="Top" Width="51" Text="0" />
+            <Label Content="Вероятность заражения в процентах" Height="28" HorizontalAlignment="Left" Margin="14,100,0,0" Name="label3" VerticalAlignment="Top" Width="239" />
+            <Slider Height="23" HorizontalAlignment="Left" Margin="14,127,0,0" Maximum="1" Name="pofinfective" SmallChange="0.001" VerticalAlignment="Top" Width="100" ValueChanged="PofinfectiveValueChanged" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="120,127,0,0" Name="pofinfectiveView" Text="0" VerticalAlignment="Top" Width="51" />
+            <Label Content="Количество Узлов" Height="28" HorizontalAlignment="Left" Margin="14,156,0,0" Name="NodeCount" VerticalAlignment="Top" Width="239" />
+            <Slider Height="23" HorizontalAlignment="Left" Margin="14,183,0,0" Maximum="2000000" Name="NodeCountSlider" SmallChange="1" VerticalAlignment="Top" Width="100" Minimum="1000" ValueChanged="NodeCountSlider_ValueChanged" LargeChange="50" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="120,183,0,0" Name="NodeCounttextBox" Text="0" VerticalAlignment="Top" Width="51" />
+            <Label Content="Количество Рассылаемых вирусов" Height="28" HorizontalAlignment="Left" Margin="14,212,0,0" Name="MaxVirusLabel" VerticalAlignment="Top" Width="239" />
+            <Slider Height="23" HorizontalAlignment="Left" LargeChange="50" Margin="14,239,0,0" Maximum="1000" Minimum="1" Name="MaxVirusSlider" SmallChange="1" VerticalAlignment="Top" Width="100" ValueChanged="MaxVirusSlider_ValueChanged" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="120,239,0,0" Name="MaxVirustextBox" Text="0" VerticalAlignment="Top" Width="51" />
+            <!--<Border BorderBrush="Silver" BorderThickness="1" Height="296" HorizontalAlignment="Left" Margin="0,1,0,0" Name="border1" VerticalAlignment="Top" Width="250" />-->
+        </Grid>
+        <Button Content="Сохранить задачу" Height="23" HorizontalAlignment="Left" Margin="454,433,0,0" Name="SaveExp" VerticalAlignment="Top" Width="107" Grid.Column="1" Click="SaveExp_Click" />
+        <Grid Height="253" HorizontalAlignment="Left" Margin="10,6,0,0" Name="grid3" VerticalAlignment="Top" Width="192" Grid.ColumnSpan="2">
+            <RadioButton Content="Да" Height="16" Name="IsAdresDifftrue" Margin="1,86,144,151" Checked="IsAdresDifftrue_Checked" />
+            <RadioButton Content="Нет" Height="16" Name="IsAdresDifffalse" Margin="33,86,106,152" Checked="IsAdresDifffalse_Checked" />
+            <Label Content="Проводить ли разделение адресного пространства" Height="27" HorizontalAlignment="Left" Margin="0,60,0,0" Name="IsAdresDiffLable" VerticalAlignment="Top" Width="179" />
+            <RadioButton Content="Да" Height="16" Margin="0,38,0,199" Name="isAppendtrue" Checked="IsAppendtrueChecked" HorizontalAlignment="Left" Width="47" />
+            <RadioButton Content="Нет" Height="16" Margin="33,38,106,199" Name="isAppendfalse" Checked="IsAppendfalseChecked" />
+            <Label Content="Писать в файл в конце или каждую итерацию" Height="27" HorizontalAlignment="Left" Margin="0,6,0,0" Name="label5" VerticalAlignment="Top" Width="179" />
+            <Label Content="Какой тип распространения вирусов" Height="28" HorizontalAlignment="Left" Margin="0,108,0,0" Name="AdresDifflabel" VerticalAlignment="Top" Width="192" />
+            <RadioButton Content="CodeRad2" Height="16" HorizontalAlignment="Left" Margin="1,161,0,0" Name="CodeRad2radioButton" VerticalAlignment="Top" Checked="CodeRad2radioButton_Checked" />
+            <RadioButton Content="Sqrt" Height="16" HorizontalAlignment="Left" Margin="1,139,0,0" Name="SqrtradioButton" VerticalAlignment="Top" Checked="SqrtradioButton_Checked" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="6,212,0,0" Name="granicatextbox" VerticalAlignment="Top" Width="92" />
+            <Label Content="Минимальный размер разделения адресного пространства" Height="28" HorizontalAlignment="Left" Margin="-1,183,0,0" Name="granicalabel" VerticalAlignment="Top" Width="193" />
+        </Grid>
+    </Grid>
+</Window>

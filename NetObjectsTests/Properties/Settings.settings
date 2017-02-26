@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NetObjectsTests.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PofInfectiveAllNet" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">0.005</Value>
+    </Setting>
+    <Setting Name="NodeCountInNet" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="PofBuckupChanel" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">0.005</Value>
+    </Setting>
+    <Setting Name="PathToTestResults" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">L:\Code\virusnew\trunk\NetObjects\NetObjectsTests\bin\Result</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="StartSolution.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Path" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Results\</Value>
+    </Setting>
+    <Setting Name="viruscopy" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="pinfective" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">0.005</Value>
+    </Setting>
+    <Setting Name="maxlinkcount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="minlink" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="segmentcount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="granica" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="adressdiffstrategy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Sqrt</Value>
+    </Setting>
+    <Setting Name="isappend" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="virussendstrategy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CodeRed2</Value>
+    </Setting>
+    <Setting Name="CalculationNodeCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="isadresdiff" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CountOfIteration" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="addtomaxlinkcount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="AverageLinkCount" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ExpCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="NetType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2_3_0</Value>
+    </Setting>
+    <Setting Name="NodeInNetCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">100000</Value>
+    </Setting>
+    <Setting Name="DefaultConnectionWeight" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
